@@ -8,9 +8,8 @@
     "npm": "8.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": ""
- 
+    "test": "env",
+    "start": "^5.1.0"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +22,6 @@
     "mongoose": "^6.2.9",
     "node": "^17.7.2",
     "nodemon": "^2.0.15"
+    
   }
 }
