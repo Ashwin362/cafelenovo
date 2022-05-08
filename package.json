@@ -21,9 +21,9 @@
     "jsdom": "^19.0.0",
     "mongoose": "^6.2.9",
     "node": "^17.7.2",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ashwin362/cafe-lenovo.git"
