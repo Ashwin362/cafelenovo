@@ -10,7 +10,8 @@ const Resvertion = require("./models/contact")
 
 const { json } = require('express');
 const { table } = require('console');
-const port = process.env.port || 8007
+const port = process.env.port || 8007;
+const host = '0.0.0.0'
 const static_path = path.join(__dirname, "../public")
 const templete_path = path.join(__dirname, "../templetes/views")
 const partials_path = path.join(__dirname, "../templetes/partials")
@@ -96,6 +97,6 @@ app.post("/contact", async (req, res) => {
 app.get("/logine", (req, res) => {
   res.render('logine')
 })
-app.listen(8008, () => {
+app.listen(8007,host, () => {
   console.log("server is running")
 })
