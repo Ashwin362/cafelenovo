@@ -37,12 +37,16 @@ app.get("/resvertion", (req, res) => {
 app.post("/index", (req, res) => {
   res.render('index')
 })
-
+app.get("/logine", (req, res) => {
+  res.render('logine')
+})
 app.post("/register", async (req, res) => {
   try {
     const password = req.body.password;
     const cpassword = req.body.confirmpassword;
+    //console.log(password, cpassword);
     if (password === cpassword) {
+
       const registerEmloyee = new Register({
         firstname: req.body.firstname,
         username: req.body.username,
@@ -52,6 +56,7 @@ app.post("/register", async (req, res) => {
         cpassword: req.body.confirmpassword,
       })
       const registered = await registerEmloyee.save();
+      //console.log(registered);
       res.status(201).render('index')
     }
     else {
@@ -89,14 +94,9 @@ app.post("/contact", async (req, res) => {
   }
 })
 
-
-
-
-
-
 app.get("/logine", (req, res) => {
   res.render('logine')
 })
-app.listen(8007,host, () => {
+app.listen(8007, host, () => {
   console.log("server is running")
 })
